@@ -1,0 +1,329 @@
+body{
+    margin: 0;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: normal;
+    align-items: center;
+    
+}
+
+
+.nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav a {
+    color: #F5F1ED ;
+    text-decoration: none;
+    display: block;
+    font-size: 1rem;
+    transition: all 0.8s ease-out;
+    animation-name: example2;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+keyframes example2 {
+    0%{
+        
+        rotate: 0deg;
+    }
+    25%{
+       
+        rotate: 360deg;
+    }
+    50%{
+       
+        rotate: 0deg;
+    }
+    75%{
+        
+        rotate: -360deg;
+    }
+    100%{
+        
+        rotate: 0deg;
+    }
+}
+
+.nav a:hover{
+    color: #1F51FF ;
+    transform: rotate(6deg) scale(2);
+}
+
+.nav li {
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+
+.header {
+    padding: 25px;
+    background-color:#252323 ;
+    background-image: linear-gradient(#252323, #252323c0);
+    color:#F5F1ED ;
+    display: flex;
+    flex-direction: column;
+    justify-content:start;
+    align-items: center;
+    margin: 0;
+    border-radius: 0px 0px 75px 75px;
+    animation: 1s gradchange infinite;
+}
+
+@media only screen and (max-width: 600px) {
+    .header {
+        border-radius: 0px;
+    }
+}
+
+keyframes gradchange {
+    0% {
+        background-image: linear-gradient(#252323, #575252);
+    }
+    50% {
+        background-image: linear-gradient( #575252, #252323);
+    }
+    100% {
+        background-image: linear-gradient(#252323, #575252);
+    }
+}
+
+.logo {
+    padding: 0;
+    
+}
+
+.logo h1{
+    font-size: 3rem;
+    transition: all 0.5s ease-out;
+    color: #DAD2BC;
+    letter-spacing: 0px;
+    position: relative;
+    animation-name: example;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    margin: 25PX;
+    
+
+}
+
+@keyframes example {
+   0% {
+       letter-spacing: 0rem;
+   }
+   10% {
+       letter-spacing: 1rem;
+   }
+   20% {
+       letter-spacing: 2rem;
+   }
+   30% {
+       letter-spacing: 3rem;
+   }
+   40% {
+       letter-spacing: 4rem;
+   }
+   50% {
+       letter-spacing: 5rem;
+   }
+   60% {
+       letter-spacing: 4rem;
+   }
+   70% {
+       letter-spacing: 3rem;
+   }
+   80% {
+       letter-spacing: 2rem;
+   }
+   90% {
+       letter-spacing: 1rem;
+   }
+   1000% {
+       letter-spacing: 0rem;
+   }
+}
+
+.logo h1:hover{
+    color: #DAD2BC;
+    transform:  scale(1.08);
+}
+
+
+.images img{
+    width:100%;
+}
+
+#slider {
+    overflow: hidden;
+}
+
+#slider figure{
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 10s slider infinite;
+}
+
+#slider figure img{
+    float: left;
+    width: 20%;
+}
+
+@keyframes slider{
+    0%{
+        left: 0;
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -200%;
+    }
+    
+}
+
+
+circl {
+    height: 100px;
+    width: 100px;
+    border-radius: 25px;
+    background: red;
+    position: absolute;
+    animation:  5s randanim infinite;
+    direction: alternate;
+    align-items: center;
+}
+
+@keyframes randanim {
+    0%{
+        background: red;
+        left: 0px;
+        top: 0px;
+        rotate: 0px;
+    }
+    25%{
+        background: yellow;
+        left:1200px;
+        top: 0px;
+        rotate: 45px;
+    }
+    50%{
+        background: blue;
+        left:1200px;
+        top: 1200px;
+        rotate: 90px;
+    }
+    75%{
+        background: green;
+        left: 0px;
+        top: 1200px;
+        rotate: 180px;
+    }
+    100%{
+        background: red;
+        left: 0px;
+        top: 0px;
+        rotate: 360px;
+    }
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #252323;
+    color: white;
+    text-align: center;
+    position: fixed;
+}
+
+.colorbutn {
+    background-color: blue;
+    
+}
+
+.fancontainer {
+    width: 1fr;
+    display: flexbox;
+    justify-content: center;
+    padding-left: 45px;
+    padding-right: 45px;
+}
+
+.fans {
+    width: 1fr;
+    display: flex;
+    justify-content: space-between;
+    padding: 45px;
+    align-items: center;
+    
+}
+
+.fan {
+    image-resolution: 50%;
+
+}
+
+.fan:hover {
+    
+    animation: 2s fanrotation infinite ease-out;
+
+}
+
+@keyframes fanrotation {
+    0%{
+        
+        rotate: 0deg;
+    }
+    10%{
+       
+        rotate: 45deg;
+    }
+    20%{
+       
+        rotate: 90deg;
+    }
+    30%{
+        
+        rotate: 180deg;
+    }
+    40%{
+        
+        rotate: 225deg;
+    }
+    50%{
+       
+        rotate: 270deg;
+    }
+    60%{
+       
+        rotate: 315deg;
+    }
+    70%{
+        
+        rotate: 360deg;
+    }
+    80%{
+        
+        rotate: 360deg;
+    }
+}
+
+.mainhero {
+    display: flex;
+}
